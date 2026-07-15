@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon Christus | Redesign</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- Global Particle Mesh -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-outline"></div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo magnetic-wrap">
+                <span class="magnetic-inner"><span class="logo-accent">&lt;</span>Ramon<span class="logo-accent">
+                        /&gt;</span></span>
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="primary-navigation" class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#whoami" class="nav-link">About</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#passions" class="nav-link">Passions</a></li>
+                    <li><a href="#drive" class="nav-link">Drive</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-parallax-bg parallax-layer" data-px="0.2">
+                <div class="hero-grid-floor"></div>
+            </div>
+            
+            <!-- Aurora blobs -->
+            <div class="aurora-blob blob-1 parallax-layer" data-mx="0.05"></div>
+            <div class="aurora-blob blob-2 parallax-layer" data-mx="-0.03"></div>
+
+            <!-- Floating code snippets -->
+            <div class="parallax-layer floating-code code-1" data-px="-0.2" data-mx="0.02">const dev = new Arcee();</div>
+            <div class="parallax-layer floating-code code-2" data-px="0.3" data-mx="-0.04">01000011 01011001</div>
+            <div class="parallax-layer floating-code code-3" data-px="0.1" data-mx="0.06">while(alive) { code(); }</div>
+            
+            <div class="container hero-content">
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <div class="tag-chips reveal">
+                            <span class="chip">Cybersecurity</span>
+                            <span class="chip">Developer</span>
+                        </div>
+                        <h1 class="hero-title reveal delay-1">
+                            Hi, I am <span class="highlight-text">Arcee</span>
+                        </h1>
+                        <h2 class="hero-subtitle reveal delay-2">
+                            I am a <span id="typing-text"></span><span class="cursor">|</span>
+                        </h2>
+                    </div>
+                    <div class="hero-portrait-slot reveal delay-3 parallax-layer" data-px="0.05" data-mx="-0.02">
+                        <div class="photo-placeholder drop-zone" id="portrait-photo">
+                            <img src="Profile.jpg" alt="Ramon Portrait">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 / whoami -->
+        <section id="whoami" class="whoami-section">
+            <div class="parallax-layer bg-blob" data-px="-0.15" style="top: 30%; right: 10%;"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">01 / whoami</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                
+                <div class="whoami-grid">
+                    <div class="bio-content reveal-slide-left">
+                        <p class="bio-text">
+                            I am a driven individual who thrives at the intersection of technology and real-world exploration. Born and raised in
+                            the scenic coastal province of Agusan del Norte, I developed a natural curiosity for how things work—both in the digital
+                            realm and the physical world.
+                        </p>
+                        <p class="bio-text">
+                            Whether I'm dissecting a security challenge, writing clean code for a new application, riding across scenic highways, or diving deep into the ocean, I approach every aspect of my life with dedication, resilience, and a hunger for continuous growth.
+                        </p>
+                    </div>
+                    <div class="adventure-photo-slot reveal delay-1 parallax-layer" data-px="0.08">
+                        <div class="photo-placeholder drop-zone" id="adventure-photo">
+                            <img src="AdventurePicture.jpg" alt="Adventure Photo">
+                        </div>
+                    </div>
+                    <div class="identity-stats-grid">
+                        <div class="stat-card reveal-zoom delay-1">
+                            <div class="stat-icon"><i class="fa-solid fa-bug-slash"></i></div>
+                            <div class="stat-info">
+                                <h4>CTF Player</h4>
+                                <p>TryHackMe & HTB</p>
+                            </div>
+                        </div>
+                        <div class="stat-card reveal-zoom delay-2">
+                            <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="stat-info">
+                                <h4>Developer</h4>
+                                <p>Web & Mobile Apps</p>
+                            </div>
+                        </div>
+                        <div class="stat-card reveal-zoom delay-3">
+                            <div class="stat-icon"><i class="fa-solid fa-motorcycle"></i></div>
+                            <div class="stat-info">
+                                <h4>Rider</h4>
+                                <p>Long-distance</p>
+                            </div>
+                        </div>
+                        <div class="stat-card reveal-zoom delay-4">
+                            <div class="stat-icon"><i class="fa-solid fa-fish"></i></div>
+                            <div class="stat-info">
+                                <h4>Waterman</h4>
+                                <p>Spearfishing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 / journey -->
+        <section id="journey" class="journey-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">02 / journey</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+                
+                <div class="horizontal-timeline-wrapper">
+                    <div class="timeline-line reveal-draw"></div>
+                    <div class="horizontal-timeline">
+                        <div class="timeline-step reveal-rise delay-1">
+                            <div class="timeline-dot"><i class="fa-solid fa-child"></i></div>
+                            <span class="timeline-date">Elementary</span>
+                            <h3>Anakan Central School</h3>
+                        </div>
+                        <div class="timeline-step reveal-rise delay-2">
+                            <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                            <span class="timeline-date">Junior High</span>
+                            <h3>Anakan National HS</h3>
+                        </div>
+                        <div class="timeline-step reveal-rise delay-3">
+                            <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                            <span class="timeline-date">Senior High</span>
+                            <h3>Gingoog City Colleges</h3>
+                        </div>
+                        <div class="timeline-step reveal-rise delay-4">
+                            <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <span class="timeline-date">College</span>
+                            <h3>TIP Quezon City</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 / passions -->
+        <section id="passions" class="passions-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">03 / passions</span>
+                    <h2 class="section-title">Niches & Passions</h2>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Large 1 -->
+                    <div class="bento-card large tilt-3d reveal-zoom delay-1">
+                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Cybersecurity</h3>
+                        <p>Deeply hooked on securing systems. CTF challenges on THM & HTB.</p>
+                        <div class="tags"><span>Pentesting</span><span>Reversing</span></div>
+                        <div class="card-glow"></div>
+                        </div>
+                    <!-- Large 2 -->
+                    <div class="bento-card large tilt-3d reveal-zoom delay-2">
+                        <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>App Development</h3>
+                        <p>Building high-performance web and mobile apps with clean UIs.</p>
+                        <div class="tags"><span>Web</span><span>Mobile</span></div>
+                        <div class="card-glow"></div>
+                        </div>
+                    <!-- Small 1 -->
+                    <div class="bento-card small tilt-3d reveal-zoom delay-3">
+                        <div class="card-icon"><i class="fa-solid fa-water"></i></div>
+                        <h3>Water</h3>
+                        <p>Spearfishing & Wakeboarding.</p>
+                        <div class="card-glow"></div>
+                        </div>
+                    <!-- Small 2 -->
+                    <div class="bento-card small tilt-3d reveal-zoom delay-4">
+                        <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
+                        <h3>Rides</h3>
+                        <p>Long-distance touring.</p>
+                        <div class="card-glow"></div>
+                        </div>
+                    <!-- Small 3 -->
+                    <div class="bento-card small tilt-3d reveal-zoom delay-5">
+                        <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                        <h3>Music</h3>
+                        <p>Sound design & production.</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 / drive -->
+        <section id="drive" class="drive-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">04 / drive</span>
+                    <h2 class="section-title">Purpose</h2>
+                </div>
+                <div class="drive-layout">
+                    <div class="drive-photo-slot parallax-layer" data-px="0.04">
+                        <div class="photo-placeholder drop-zone" id="family-photo">
+                            <img src="FamilyPhoto.jpg" alt="Family Photo">
+                        </div>
+                    </div>
+                    <div class="drive-content parallax-layer" data-px="0.12">
+                        <p class="lead-text reveal delay-1">
+                            Behind every line of code I write lies a deeper commitment to the people who matter most.
+                        </p>
+                        <p class="purpose-desc reveal delay-2">
+                            As a proud breadwinner, I carry the responsibility of supporting my family. I have three siblings and dedicate
+                            myself to paving the way for their futures.
+                        </p>
+                        <div class="support-cards-list">
+                            <div class="support-card reveal-slide-right delay-3 tilt-3d">
+                                <div class="support-icon"><i class="fa-solid fa-ship"></i></div>
+                                <div>
+                                    <h5>The Seaman</h5>
+                                    <p>Fully trained and ready for deployment.</p>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+                            <div class="support-card reveal-slide-right delay-4 tilt-3d">
+                                <div class="support-icon"><i class="fa-solid fa-user-nurse"></i></div>
+                                <div>
+                                    <h5>The Nursing Student</h5>
+                                    <p>Navigating the rigorous path of healthcare.</p>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-accent">&lt;</span>Ramon<span class="logo-accent"> /&gt;</span>
+                </a>
+                <p>Balancing code, security, and adventure.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://tryhackme.com" target="_blank" aria-label="TryHackMe" class="magnetic-wrap"><span
+                        class="magnetic-inner"><i class="fa-solid fa-shield-halved"></i></span></a>
+                <a href="https://hackthebox.com" target="_blank" aria-label="HackTheBox" class="magnetic-wrap"><span
+                        class="magnetic-inner"><i class="fa-solid fa-cube"></i></span></a>
+                <a href="#" aria-label="GitHub" class="magnetic-wrap"><span class="magnetic-inner"><i
+                            class="fa-brands fa-github"></i></span></a>
+                <a href="#" aria-label="LinkedIn" class="magnetic-wrap"><span class="magnetic-inner"><i
+                            class="fa-brands fa-linkedin"></i></span></a>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js?v=2"></script>
+</body>
+</html>
