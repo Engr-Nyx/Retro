@@ -3,54 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramon Christus | Cybersecurity & Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Ramon Christus - Cybersecurity enthusiast, Web/Mobile Developer, Adventurer, and Breadwinner. Discover my journey, education, and passions.">
-    
+    <title>Ramon Christus | Redesign</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-
-    <!-- Background Canvas for Interactive Particles -->
+    <!-- Global Particle Mesh -->
     <canvas id="bg-canvas"></canvas>
 
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
     <div class="custom-cursor-outline"></div>
 
-    <!-- Vertical Slide Navigation (Slideshow Dots) -->
-    <div class="slide-nav">
-        <a href="#hero" class="slide-dot active" data-slide="0"><span class="dot-label">Home</span></a>
-        <a href="#about" class="slide-dot" data-slide="1"><span class="dot-label">About</span></a>
-        <a href="#journey" class="slide-dot" data-slide="2"><span class="dot-label">Journey</span></a>
-        <a href="#passions" class="slide-dot" data-slide="3"><span class="dot-label">Passions</span></a>
-        <a href="#purpose" class="slide-dot" data-slide="4"><span class="dot-label">Purpose</span></a>
-    </div>
-
-    <!-- Header / Navigation -->
+    <!-- Header -->
     <header id="main-header">
         <div class="header-container">
-            <a href="#" class="logo">
-                <span class="logo-accent">&lt;</span>Ramon<span class="logo-accent"> /&gt;</span>
+            <a href="#" class="logo magnetic-wrap">
+                <span class="magnetic-inner"><span class="logo-accent">&lt;</span>Ramon<span class="logo-accent">
+                        /&gt;</span></span>
             </a>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
             <nav id="primary-navigation" class="nav-menu">
                 <ul>
                     <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#whoami" class="nav-link">About</a></li>
                     <li><a href="#journey" class="nav-link">Journey</a></li>
                     <li><a href="#passions" class="nav-link">Passions</a></li>
-                    <li><a href="#purpose" class="nav-link">Purpose</a></li>
+                    <li><a href="#drive" class="nav-link">Drive</a></li>
                 </ul>
             </nav>
         </div>
@@ -59,108 +48,73 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
-            <!-- Multi-Layer Parallax Background -->
-            <div class="hero-parallax">
-                <div class="hero-layer layer-bg"></div>
-                <div class="hero-layer layer-grid"></div>
-                <div class="hero-layer layer-glow"></div>
+            <div class="hero-parallax-bg parallax-layer" data-px="0.2">
+                <div class="hero-grid-floor"></div>
             </div>
+            
+            <!-- Aurora blobs -->
+            <div class="aurora-blob blob-1 parallax-layer" data-mx="0.05"></div>
+            <div class="aurora-blob blob-2 parallax-layer" data-mx="-0.03"></div>
 
-            <!-- Parallax Background Elements (Floating Blobs) -->
-            <div class="parallax-shape shape-1" data-speed="0.15"></div>
-            <div class="parallax-shape shape-2" data-speed="-0.1"></div>
-            <div class="parallax-shape shape-3" data-speed="0.05"></div>
-
-            <!-- Floating Parallax Tech Elements -->
-            <div class="parallax-wrap" data-speed="0.25" style="top: 18%; left: 10%;">
-                <div class="floating-item"><i class="fa-solid fa-code"></i></div>
-            </div>
-            <div class="parallax-wrap" data-speed="-0.15" style="top: 25%; right: 15%;">
-                <div class="floating-item font-mono">const dev = new Ramon();</div>
-            </div>
-            <div class="parallax-wrap" data-speed="0.3" style="top: 60%; left: 22%;">
-                <div class="floating-item"><i class="fa-solid fa-user-shield"></i></div>
-            </div>
-            <div class="parallax-wrap" data-speed="-0.2" style="top: 70%; right: 10%;">
-                <div class="floating-item font-mono">01000011 01011001</div>
-            </div>
-
-            <div class="hero-content">
-                <h1 class="hero-title reveal-text-container">
-                    <span class="reveal-text">Hi, I am <span class="highlight-text">Ramon</span></span>
-                </h1>
-                <h2 class="hero-subtitle reveal-text-container delay-1">
-                    <span class="reveal-text">I am a <span id="typing-text"></span><span class="cursor">|</span></span>
-                </h2>
-                <p class="hero-description reveal-fade delay-3">
-                    A tech enthusiast born in Nasipit, Agusan del Norte, blending the analytical world of cybersecurity and development with the raw adventure of the outdoors.
-                </p>
-                <div class="hero-actions reveal-fade delay-4">
-                    <a href="#about" class="btn btn-primary">Explore My Story</a>
-                    <a href="#passions" class="btn btn-secondary">View Passions</a>
+            <!-- Floating code snippets -->
+            <div class="parallax-layer floating-code code-1" data-px="-0.2" data-mx="0.02">const dev = new Arcee();</div>
+            <div class="parallax-layer floating-code code-2" data-px="0.3" data-mx="-0.04">01000011 01011001</div>
+            <div class="parallax-layer floating-code code-3" data-px="0.1" data-mx="0.06">while(alive) { code(); }</div>
+            
+            <div class="container hero-content">
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <div class="tag-chips reveal">
+                            <span class="chip">Cybersecurity</span>
+                            <span class="chip">Developer</span>
+                        </div>
+                        <h1 class="hero-title reveal delay-1">
+                            Hi, I am <span class="highlight-text">Arcee</span>
+                        </h1>
+                        <h2 class="hero-subtitle reveal delay-2">
+                            I am a <span id="typing-text"></span><span class="cursor">|</span>
+                        </h2>
+                    </div>
+                    <div class="hero-portrait-slot reveal delay-3 parallax-layer" data-px="0.05" data-mx="-0.02">
+                        <div class="photo-placeholder drop-zone" id="portrait-photo">
+                            <img src="Profile.jpg" alt="Ramon Portrait">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span>Scroll Down</span>
             </div>
         </section>
 
-        <!-- About Me / Biography Section -->
-        <section id="about" class="about-section">
-            <!-- Parallax Background Elements -->
-            <div class="parallax-shape shape-4" data-speed="0.1"></div>
-            <div class="parallax-shape shape-5" data-speed="-0.08"></div>
-
-            <!-- Floating Parallax Elements -->
-            <div class="parallax-wrap" data-speed="0.2" style="top: 15%; left: 5%;">
-                <div class="floating-item"><i class="fa-solid fa-terminal"></i></div>
-            </div>
-            <div class="parallax-wrap" data-speed="-0.1" style="top: 45%; right: 8%;">
-                <div class="floating-item font-mono">&lt;bio&gt;</div>
-            </div>
-            <div class="parallax-wrap" data-speed="0.15" style="bottom: 10%; left: 12%;">
-                <div class="floating-item"><i class="fa-solid fa-network-wired"></i></div>
-            </div>
-
+        <!-- 01 / whoami -->
+        <section id="whoami" class="whoami-section">
+            <div class="parallax-layer bg-blob" data-px="-0.15" style="top: 30%; right: 10%;"></div>
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag reveal-fade">Who I Am</span>
-                    <h2 class="section-title reveal-text-container delay-1">
-                        <span class="reveal-text">About Me</span>
-                    </h2>
-                    <div class="title-bar reveal-fade delay-2"></div>
+                <div class="section-header reveal">
+                    <span class="section-tag">01 / whoami</span>
+                    <h2 class="section-title">About Me</h2>
                 </div>
                 
-                <div class="about-grid">
-                    <div class="about-info-card reveal-zoom">
-                        <div class="card-glow"></div>
-                        <div class="bio-header">
-                            <div class="avatar-placeholder">
-                                <i class="fa-solid fa-user-shield"></i>
-                            </div>
-                            <div>
-                                <h3>Ramon Christus</h3>
-                                <p class="origin"><i class="fa-solid fa-location-dot"></i> Nasipit, Agusan del Norte, PH</p>
-                                <p class="birthdate"><i class="fa-solid fa-calendar-days"></i> March 12, 2000</p>
-                            </div>
-                        </div>
+                <div class="whoami-grid">
+                    <div class="bio-content reveal-slide-left">
                         <p class="bio-text">
-                            I am a driven individual who thrives at the intersection of technology and real-world exploration. Born and raised in the scenic coastal province of Agusan del Norte, I developed a natural curiosity for how things work—both in the digital realm and the physical world. 
+                            I am a driven individual who thrives at the intersection of technology and real-world exploration. Born and raised in
+                            the scenic coastal province of Agusan del Norte, I developed a natural curiosity for how things work—both in the digital
+                            realm and the physical world.
                         </p>
                         <p class="bio-text">
                             Whether I'm dissecting a security challenge, writing clean code for a new application, riding across scenic highways, or diving deep into the ocean, I approach every aspect of my life with dedication, resilience, and a hunger for continuous growth.
                         </p>
                     </div>
-
-                    <div class="quick-stats">
+                    <div class="adventure-photo-slot reveal delay-1 parallax-layer" data-px="0.08">
+                        <div class="photo-placeholder drop-zone" id="adventure-photo">
+                            <img src="AdventurePicture.jpg" alt="Adventure Photo">
+                        </div>
+                    </div>
+                    <div class="identity-stats-grid">
                         <div class="stat-card reveal-zoom delay-1">
                             <div class="stat-icon"><i class="fa-solid fa-bug-slash"></i></div>
                             <div class="stat-info">
                                 <h4>CTF Player</h4>
-                                <p>TryHackMe & HackTheBox</p>
+                                <p>TryHackMe & HTB</p>
                             </div>
                         </div>
                         <div class="stat-card reveal-zoom delay-2">
@@ -174,14 +128,14 @@
                             <div class="stat-icon"><i class="fa-solid fa-motorcycle"></i></div>
                             <div class="stat-info">
                                 <h4>Rider</h4>
-                                <p>Long-distance touring</p>
+                                <p>Long-distance</p>
                             </div>
                         </div>
                         <div class="stat-card reveal-zoom delay-4">
                             <div class="stat-icon"><i class="fa-solid fa-fish"></i></div>
                             <div class="stat-info">
                                 <h4>Waterman</h4>
-                                <p>Spearfishing & Wakeboarding</p>
+                                <p>Spearfishing</p>
                             </div>
                         </div>
                     </div>
@@ -189,208 +143,131 @@
             </div>
         </section>
 
-        <!-- Educational Journey Section -->
+        <!-- 02 / journey -->
         <section id="journey" class="journey-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag reveal-fade">Milestones</span>
-                    <h2 class="section-title reveal-text-container delay-1">
-                        <span class="reveal-text">Education</span>
-                    </h2>
-                    <div class="title-bar reveal-fade delay-2"></div>
+                <div class="section-header reveal">
+                    <span class="section-tag">02 / journey</span>
+                    <h2 class="section-title">Education</h2>
                 </div>
-
-                <div class="timeline">
-                    <!-- College -->
-                    <div class="timeline-item right reveal-slide-right">
-                        <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">College Days</span>
-                            <h3>Technological Institute of the Philippines</h3>
-                            <p class="school-branch">TIP Quezon City (TIPqc)</p>
-                            <p class="timeline-desc">Pursued higher education in technology, refining my software engineering and analytical skills in a highly competitive academic environment.</p>
-                        </div>
-                    </div>
-
-                    <!-- Senior High -->
-                    <div class="timeline-item left reveal-slide-left delay-1">
-                        <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Senior High School</span>
-                            <h3>Gingoog City Colleges</h3>
-                            <p class="timeline-desc">Laid the groundwork for my digital and technical skills, exploring early programming concepts and preparing for a career in tech.</p>
-                        </div>
-                    </div>
-
-                    <!-- Junior High -->
-                    <div class="timeline-item right reveal-slide-right delay-2">
-                        <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Junior High School</span>
-                            <h3>Anakan National High School</h3>
-                            <p class="timeline-desc">Developed a strong curiosity for computing, science, and problem-solving during my teenage years.</p>
-                        </div>
-                    </div>
-
-                    <!-- Elementary -->
-                    <div class="timeline-item left reveal-slide-left delay-3">
-                        <div class="timeline-dot"><i class="fa-solid fa-child"></i></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Elementary Days</span>
+                
+                <div class="horizontal-timeline-wrapper">
+                    <div class="timeline-line reveal-draw"></div>
+                    <div class="horizontal-timeline">
+                        <div class="timeline-step reveal-rise delay-1">
+                            <div class="timeline-dot"><i class="fa-solid fa-child"></i></div>
+                            <span class="timeline-date">Elementary</span>
                             <h3>Anakan Central School</h3>
-                            <p class="timeline-desc">Where the journey began, fostering a passion for learning and exploring the world around me.</p>
+                        </div>
+                        <div class="timeline-step reveal-rise delay-2">
+                            <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                            <span class="timeline-date">Junior High</span>
+                            <h3>Anakan National HS</h3>
+                        </div>
+                        <div class="timeline-step reveal-rise delay-3">
+                            <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                            <span class="timeline-date">Senior High</span>
+                            <h3>Gingoog City Colleges</h3>
+                        </div>
+                        <div class="timeline-step reveal-rise delay-4">
+                            <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <span class="timeline-date">College</span>
+                            <h3>TIP Quezon City</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Niches & Passions Section -->
+        <!-- 03 / passions -->
         <section id="passions" class="passions-section">
-            <!-- Parallax Background Elements -->
-            <div class="parallax-shape shape-6" data-speed="0.12"></div>
-
-            <!-- Floating Parallax Elements -->
-            <div class="parallax-wrap" data-speed="0.3" style="top: 12%; left: 8%;">
-                <div class="floating-item"><i class="fa-solid fa-anchor"></i></div>
-            </div>
-            <div class="parallax-wrap" data-speed="-0.12" style="top: 55%; right: 6%;">
-                <div class="floating-item"><i class="fa-solid fa-gauge-high"></i></div>
-            </div>
-            <div class="parallax-wrap" data-speed="0.22" style="bottom: 8%; left: 25%;">
-                <div class="floating-item"><i class="fa-solid fa-sliders"></i></div>
-            </div>
-
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag reveal-fade">What I Do</span>
-                    <h2 class="section-title reveal-text-container delay-1">
-                        <span class="reveal-text">Niches & Passions</span>
-                    </h2>
-                    <div class="title-bar reveal-fade delay-2"></div>
+                <div class="section-header reveal">
+                    <span class="section-tag">03 / passions</span>
+                    <h2 class="section-title">Niches & Passions</h2>
                 </div>
 
-                <div class="passions-grid">
-                    <!-- Cybersecurity -->
-                    <div class="passion-card reveal-zoom delay-1">
+                <div class="bento-grid">
+                    <!-- Large 1 -->
+                    <div class="bento-card large tilt-3d reveal-zoom delay-1">
                         <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <h3>Cybersecurity & CTFs</h3>
-                        <p>Deeply hooked on securing systems and ethical hacking. I actively participate in Capture The Flag (CTF) challenges on platforms like TryHackMe and HackTheBox, constantly sharpening my pentesting, reverse engineering, and threat analysis skills.</p>
-                        <div class="tags">
-                            <span>TryHackMe</span>
-                            <span>HackTheBox</span>
-                            <span>CTF</span>
-                            <span>Penetration Testing</span>
+                        <h3>Cybersecurity</h3>
+                        <p>Deeply hooked on securing systems. CTF challenges on THM & HTB.</p>
+                        <div class="tags"><span>Pentesting</span><span>Reversing</span></div>
+                        <div class="card-glow"></div>
                         </div>
-                    </div>
-
-                    <!-- App Development -->
-                    <div class="passion-card reveal-zoom delay-2">
+                    <!-- Large 2 -->
+                    <div class="bento-card large tilt-3d reveal-zoom delay-2">
                         <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3>App Development</h3>
-                        <p>I enjoy bringing ideas to life by building intuitive, high-performance web and mobile applications in my free time. I focus on creating clean user interfaces backed by solid, scalable architecture.</p>
-                        <div class="tags">
-                            <span>Web Apps</span>
-                            <span>Mobile Development</span>
-                            <span>UI/UX</span>
-                            <span>Vanilla JS</span>
+                        <p>Building high-performance web and mobile apps with clean UIs.</p>
+                        <div class="tags"><span>Web</span><span>Mobile</span></div>
+                        <div class="card-glow"></div>
                         </div>
-                    </div>
-
-                    <!-- Water Activities -->
-                    <div class="passion-card reveal-zoom delay-3">
+                    <!-- Small 1 -->
+                    <div class="bento-card small tilt-3d reveal-zoom delay-3">
                         <div class="card-icon"><i class="fa-solid fa-water"></i></div>
-                        <h3>Water Adventures</h3>
-                        <p>The ocean is my playground. I am passionate about water sports and marine activities, including the adrenaline rush of wakeboarding, the stealth and precision of spearfishing, and the patience of traditional fishing.</p>
-                        <div class="tags">
-                            <span>Wake Boarding</span>
-                            <span>Spearfishing</span>
-                            <span>Fishing</span>
-                            <span>Ocean Life</span>
+                        <h3>Water</h3>
+                        <p>Spearfishing & Wakeboarding.</p>
+                        <div class="card-glow"></div>
                         </div>
-                    </div>
-
-                    <!-- Motorcycle Riding -->
-                    <div class="passion-card reveal-zoom delay-4">
+                    <!-- Small 2 -->
+                    <div class="bento-card small tilt-3d reveal-zoom delay-4">
                         <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
-                        <h3>Long Rides</h3>
-                        <p>There's nothing quite like the freedom of the open road. I love embarking on long motorcycle rides, exploring new landscapes, challenging terrains, and finding peace in the journey itself.</p>
-                        <div class="tags">
-                            <span>Motorcycling</span>
-                            <span>Adventure Touring</span>
-                            <span>Road Trips</span>
-                            <span>Exploration</span>
+                        <h3>Rides</h3>
+                        <p>Long-distance touring.</p>
+                        <div class="card-glow"></div>
                         </div>
-                    </div>
-
-                    <!-- Music Production -->
-                    <div class="passion-card full-width reveal-zoom delay-5">
+                    <!-- Small 3 -->
+                    <div class="bento-card small tilt-3d reveal-zoom delay-5">
                         <div class="card-icon"><i class="fa-solid fa-music"></i></div>
-                        <h3>Creating Music</h3>
-                        <p>When I'm not coding or adventuring, I channel my creativity into music. Building tracks and producing music allows me to express myself through sound, acting as a perfect creative counterweight to my technical endeavors.</p>
-                        <div class="tags">
-                            <span>Music Production</span>
-                            <span>Sound Design</span>
-                            <span>Creative Flow</span>
-                        </div>
+                        <h3>Music</h3>
+                        <p>Sound design & production.</p>
+                        <div class="card-glow"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Purpose / Family Section (Breadwinner) -->
-        <section id="purpose" class="purpose-section">
-            <!-- Parallax Background Elements -->
-            <div class="parallax-shape shape-7" data-speed="-0.05"></div>
-
-            <!-- Floating Parallax Elements -->
-            <div class="parallax-wrap" data-speed="0.18" style="top: 25%; right: 12%;">
-                <div class="floating-item"><i class="fa-solid fa-house-laptop"></i></div>
-            </div>
-            <div class="parallax-wrap" data-speed="-0.15" style="bottom: 15%; left: 8%;">
-                <div class="floating-item"><i class="fa-solid fa-compass"></i></div>
-            </div>
-
+        <!-- 04 / drive -->
+        <section id="drive" class="drive-section">
             <div class="container">
-                <div class="purpose-wrapper">
-                    <div class="purpose-image-container reveal-zoom">
-                        <div class="purpose-graphic">
-                            <i class="fa-solid fa-anchor"></i>
-                            <i class="fa-solid fa-user-nurse"></i>
-                            <i class="fa-solid fa-house-chimney-heart"></i>
+                <div class="section-header reveal">
+                    <span class="section-tag">04 / drive</span>
+                    <h2 class="section-title">Purpose</h2>
+                </div>
+                <div class="drive-layout">
+                    <div class="drive-photo-slot parallax-layer" data-px="0.04">
+                        <div class="photo-placeholder drop-zone" id="family-photo">
+                            <img src="FamilyPhoto.jpg" alt="Family Photo">
                         </div>
                     </div>
-                    <div class="purpose-content reveal-fade delay-1">
-                        <span class="section-tag reveal-fade">My Drive</span>
-                        <h2 class="section-title reveal-text-container delay-1">
-                            <span class="reveal-text">Purpose & Responsibility</span>
-                        </h2>
-                        <div class="title-bar left-align reveal-fade delay-2"></div>
-                        <p class="lead-text">
-                            Behind every line of code I write and every challenge I conquer lies a deeper commitment to the people who matter most.
+                    <div class="drive-content parallax-layer" data-px="0.12">
+                        <p class="lead-text reveal delay-1">
+                            Behind every line of code I write lies a deeper commitment to the people who matter most.
                         </p>
-                        <p class="purpose-desc">
-                            As a proud breadwinner, I carry the responsibility of supporting my family. I have three siblings (two brothers and one sister) and have dedicated myself to paving the way for their futures. Currently, I support my siblings in their academic and career pursuits:
+                        <p class="purpose-desc reveal delay-2">
+                            As a proud breadwinner, I carry the responsibility of supporting my family. I have three siblings and dedicate
+                            myself to paving the way for their futures.
                         </p>
-                        <div class="support-cards">
-                            <div class="support-card reveal-slide-right delay-2">
+                        <div class="support-cards-list">
+                            <div class="support-card reveal-slide-right delay-3 tilt-3d">
                                 <div class="support-icon"><i class="fa-solid fa-ship"></i></div>
                                 <div>
                                     <h5>The Seaman</h5>
-                                    <p>Fully trained, certified, and ready for his upcoming maritime deployment.</p>
+                                    <p>Fully trained and ready for deployment.</p>
                                 </div>
+                                <div class="card-glow"></div>
                             </div>
-                            <div class="support-card reveal-slide-right delay-3">
+                            <div class="support-card reveal-slide-right delay-4 tilt-3d">
                                 <div class="support-icon"><i class="fa-solid fa-user-nurse"></i></div>
                                 <div>
                                     <h5>The Nursing Student</h5>
-                                    <p>Navigating the rigorous academic and practical path of healthcare education.</p>
+                                    <p>Navigating the rigorous path of healthcare.</p>
                                 </div>
+                                <div class="card-glow"></div>
                             </div>
                         </div>
-                        <p class="purpose-desc">
-                            Alongside supporting my siblings, I have also established my own family, balancing the beautiful roles of being a reliable pillar for my siblings and a loving provider for my own home. This dual responsibility drives my work ethic and fuels my ambition every day.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -399,39 +276,27 @@
 
     <!-- Footer -->
     <footer class="main-footer">
-        <div class="footer-container">
+        <div class="container footer-content">
             <div class="footer-brand">
                 <a href="#" class="logo">
                     <span class="logo-accent">&lt;</span>Ramon<span class="logo-accent"> /&gt;</span>
                 </a>
-                <p>Balancing code, security, and adventure. Powered by purpose.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#journey">Journey</a></li>
-                    <li><a href="#passions">Passions</a></li>
-                    <li><a href="#purpose">Purpose</a></li>
-                </ul>
+                <p>Balancing code, security, and adventure.</p>
             </div>
             <div class="footer-socials">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <a href="https://tryhackme.com" target="_blank" aria-label="TryHackMe"><i class="fa-solid fa-shield-halved"></i></a>
-                    <a href="https://hackthebox.com" target="_blank" aria-label="HackTheBox"><i class="fa-solid fa-cube"></i></a>
-                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://tryhackme.com" target="_blank" aria-label="TryHackMe" class="magnetic-wrap"><span
+                        class="magnetic-inner"><i class="fa-solid fa-shield-halved"></i></span></a>
+                <a href="https://hackthebox.com" target="_blank" aria-label="HackTheBox" class="magnetic-wrap"><span
+                        class="magnetic-inner"><i class="fa-solid fa-cube"></i></span></a>
+                <a href="#" aria-label="GitHub" class="magnetic-wrap"><span class="magnetic-inner"><i
+                            class="fa-brands fa-github"></i></span></a>
+                <a href="#" aria-label="LinkedIn" class="magnetic-wrap"><span class="magnetic-inner"><i
+                            class="fa-brands fa-linkedin"></i></span></a>
                 </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Ramon Christus. All Rights Reserved. Built with passion & purpose.</p>
         </div>
     </footer>
 
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
